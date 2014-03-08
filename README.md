@@ -1,6 +1,6 @@
-Fucking Block Syntax
+Fucking Java Lambda Syntax
 =================
 
 Because syntax is hard.
 
-http://fuckingblocksyntax.com
+http://fuckingjavalambdasyntax.com
