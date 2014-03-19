@@ -88,23 +88,29 @@
 <body>
   <h1>How Do I Declare A Lambda in Java?</h1>
   
-  <div><h3>This page is still being built, happy to take bug reports and contributions :) 
-<!--
+  <div><h3>Note: This page is still being built, happy to take bug reports and contributions :) 
+
   <div>
-    <h2>As a <strong>local variable</strong>:</h2>
-    <code>
-      <span class='return'>Comparator<span class='parameters'>&lt;String&gt;</span></span> <span class='name'>lambdaName</span> = (<span class='parameters'>s1, s2</span>) => {...};
-    </code>
-  </div>
---> 
-  <div>
-    <h2>As an <strong>expression</strong>:</h2>
+    <h2>As a <strong>expression</strong> (example):</h2>
     <code>
     (Person <span class='parameters'>p</span>) -> <span class='parameters'>p</span>.getGender() == Person.Sex.MALE<br/>
     &emsp;    && <span class='parameters'>p</span>.getAge() >= 18<br/>
     &emsp;    && <span class='parameters'>p</span>.getAge() <= 25<br/>
     </code>
   </div>
+
+  <div>
+    <h2>As a <strong>local variable</strong>:</h2>
+    <code>
+      @FunctionalInterface<br/>
+      public interface SomeFunction {<br/>
+      &emsp;&emsp;public <span class='return'>void</span> doWork();<br/>
+      }<br/>
+     <br/>
+      <span class='return'>SomeFunction</span> <span class='name'>lambdaName</span> = () -> {...};
+    </code>
+  </div>
+
 
   <div>
     <h2>As a <strong>method parameter</strong>:</h2>
