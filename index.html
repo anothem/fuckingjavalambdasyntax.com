@@ -87,6 +87,8 @@
 
 <body>
   <h1>How Do I Declare A Lambda in Java?</h1>
+  
+  <div><h3>Work in progress :) 
 <!--
   <div>
     <h2>As a <strong>local variable</strong>:</h2>
@@ -94,25 +96,30 @@
       <span class='return'>Comparator<span class='parameters'>&lt;String&gt;</span></span> <span class='name'>lambdaName</span> = (<span class='parameters'>s1, s2</span>) => {...};
     </code>
   </div>
-
+--> 
   <div>
     <h2>As a <strong>method parameter</strong>:</h2>
     <code>
-      - (void)someMethodThatTakesABlock:(<span class='return'>returnType</span> (^)(<span class='parameter-types'>parameterTypes</span>))<span class='name'>blockName</span>;
+      @FunctionalInterface
+      public interface SomeFunction {
+         public void doWork();
+      }
+    
+      void someMethodThatTakesALambda(<span class='return'>delegateType</span>  <span class='name'>lambdaName</span>) {...}
     </code>
   </div>
 
   <div>
     <h2>As an <strong>argument to a method call</strong>:</h2>
     <code>
-      [someObject someMethodThatTakesABlock: ^<span class='return'>returnType</span> (<span class='parameters'>parameters</span>) {...}];
+      someObject.someMethodThatTakesALambda ((<span class='return'>ParameterClass</span> <span class='parameters'>p</span>) -> {...});
     </code>
   </div>
 
   <div><h3>This site doesn't cover every possible use of lambdas. 
 
   <footer>By <a href="http://florescu.org">Alex Florescu</a>, who likes Java and was impressed by the original <a href="http://fuckingblocksyntax.com/">Block syntax page</a>.</footer>
--->
+
     
 </body>
 </html>
